@@ -1,4 +1,4 @@
-<!-- Het is gelukt -->
+<!--owaudhiwud;utagd;oiwgaclutdgawcdluwaydulgwad-->
 <!DOCTYPE html>
 <html lang="nl">
 <?php include 'components/head.php' ?>
