@@ -1,0 +1,42 @@
+CREATE TABLE gebruiker
+(
+gebruikerNr int NOT NULL AUTO_INCREMENT,
+voledigeNaam varchar(255),
+wachtwoord varchar(255),
+email varchar(255),
+adres varchar(255),
+telNr varchar(255),
+gebruikerSoort varchar(255),
+PRIMARY KEY(gebruikerNr)
+);
+
+CREATE TABLE reservatie
+(
+reservatieNr int NOT NULL AUTO_INCREMENT,
+datum date,
+beginTijd time,
+eindTijd time,
+aantalPersonen int(2),
+gebruikerNr int NOT NULL,
+PRIMARY KEY(reservatieNr),
+FOREIGN KEY (gebruikerNr)REFERENCES gebruiker(gebruikerNr)
+);
+
+CREATE TABLE reservatie_menu
+(
+reservatieNr int,
+menuNr int,
+PRIMARY KEY(reservatieNr, menuNr),
+FOREIGN KEY(reservatieNr)REFERENCES reservatie(reservatieNr),
+FOREIGN KEY(menuNr)REFERENCES menu(menuNr)
+);
+
+CREATE TABLE menu
+(
+menuNr int NOT NULL AUTO_INCREMENT,
+voorGerecht varchar(255),
+hoofdGerecht varchar(255),
+toetje varchar(255),
+menuSoort varchar(255),
+PRIMARY KEY(menuNr)
+);

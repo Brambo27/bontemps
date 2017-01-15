@@ -1,0 +1,656 @@
+/* Baseline-default.css rev: 19/08/2016*/
+
+/*+++++BODY / GLOBALS+++++*/
+/*++++++++++++++++++++++++*/
+
+html {
+    -ms-overflow-style: scrollbar;
+    font-size: 14px;
+}
+
+/* disable IE scrollbar overlay */
+body {
+}
+
+.container .container {
+    padding: 0;
+    width: 100%;
+}
+
+iframe {
+    border: none;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+/* typography */
+p {
+    margin: 0 0 1em;
+    padding: 0;
+}
+
+blockquote {
+    margin: 0 0 1em;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: #1c7be1;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+p a {
+    color: #1c7be1;
+}
+
+p a:hover {
+    color: #000;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: 1.2;
+    padding: 5px 0 0;
+}
+
+#page h1, #page h2, #page h3, #page h4, #page h5, #page h6, #page .h1, #page .h2, #page .h3, #page .h4, #page .h5, #page .h6 {
+    color: #7F2A23;
+    font-family: "Maiden Orange", cursive;
+}
+
+#page h1, .h1 {
+    font-size: 2.2rem
+}
+
+#page h2, .h2 {
+    font-size: 1.8rem
+}
+
+#page h3, .h3 {
+    font-size: 1.6rem
+}
+
+#page h4, .h4 {
+    font-size: 1.4rem
+}
+
+#page h5, .h5 {
+    font-size: 1.2rem
+}
+
+#page h6, .h6 {
+    font-size: 1.0rem
+}
+
+/*+++++TOP NAVIGATION+++++*/
+/*++++++++++++++++++++++++*/
+
+/* top_navigation */
+
+/*+++++HEADER+++++*/
+/*++++++++++++++++*/
+
+/* general header */
+header .container {
+    text-align: center;
+}
+nav{
+    background-color: #7F2A23;
+}
+.navbar{
+    border-radius: 0;
+    padding: 0;
+}
+.nav {
+    display: inline-block;
+    float: none;
+    list-style: outside none none;
+    margin-bottom: -5px;
+    padding-left: 0;
+}
+.nav-item{
+    font-size: 22px;
+    font-family: "Maiden Orange", cursive;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #f2efe7;
+}
+/* logo */
+.logo {
+    text-align: center;
+    width: 300px;
+    height: 130px;
+    margin: 40px auto 0;
+}
+#page .logo h1 {
+    top: -80px;
+    position: relative;
+    color: #ffffff;
+    font-family: 'ewert', cursive;
+}
+#page .logo a:hover {
+    text-decoration: none;
+}
+#page .logo span{
+    top: -90px;
+    position: relative;
+    color: #FFFFFF;
+}
+#page header .logo h2{
+    color: #333333;
+}
+
+/* main_navigation */
+
+/** dropdowns **/
+
+/*+++++BANNER+++++*/
+/*++++++++++++++++*/
+
+body:not(.no-index) .header::before {
+    background-image: url("../images/darkparalax.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 800px;
+    left: 0;
+    position: absolute;
+    transform: translate3d(0px, -300.215px, 0px);
+    width: 100%;
+    z-index: -1;
+}
+
+/*+++++PAGE / MAIN CONTENT+++++*/
+/*+++++++++++++++++++++++++++++*/
+
+/*++general pages++*/
+
+body{
+    font: 400 20px/26px "Maiden Orange";
+}
+img { max-width: 100%; }
+
+/*++homepage++*/
+
+.wrapper {
+    padding: 0 0 70px ;
+}
+.dubble_wrapper{
+    padding: 70px 0;
+}
+/*Section main "body:not(.no-index) .section_row_main"*/
+
+body:not(.no-index) .section_row_main {
+    text-align: center;
+    color: #E4E1E1;
+}
+
+/*Section 1 "body:not(.no-index) .section_row_1"*/
+
+body:not(.no-index) .section_row_1 {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/content.jpg);
+}
+body:not(.no-index) .custom-default{
+    padding: 40px 0 ;
+}
+body:not(.no-index) .section_row_1 h2 {
+    text-transform: uppercase;
+}
+body:not(.no-index) .section_row_1 p {
+    color: #d4cab4;
+}
+/*section 2 "body:not(.no-index) .section_row_2"*/
+body:not(.no-index) .section_row_2{
+    background-image: url(../images/parallax-02.jpg);
+}
+body:not(.no-index) #page .section_row_2 h2{
+    font-size: 40px;
+}
+body:not(.no-index) .carousel-header {
+    text-align: center;
+}
+body:not(.no-index) #owl-carousel .item{
+    margin: 3px;
+}
+body:not(.no-index) #owl-carousel .owl-item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*section 3 "body:not(.no-index) .section_row_3"*/
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+/*++++++FOLLOW UP PAGES++++++*/
+/*+++++++++++++++++++++++++++*/
+
+/*++Menu++*/
+.menu-nav li{
+    display: inline-block;
+}
+.menu-nav li a{
+    background: #a73f07 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 14px 35px 12px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+/*Section main "body:not(.no-index) .section_row_main"*/
+
+#page.menu .section_row_main {
+    background-image: url(../images/content.jpg);
+    text-align: center;
+}
+#page.menu .section_row_main p {
+    color: #d4cab4;
+    font-family: "Times New Roman";
+}
+
+/*Section 1 "body:not(.no-index) .section_row_1"*/
+
+#page.menu .section_row_1, #page.menu .section_row_2, #page.menu .section_row_4, #page.menu .section_row_5 {
+    background-image: url(../images/content.jpg);
+    text-align: center;
+}
+#page.menu .section_row_3{
+    background-image: url(../images/parallax-02.jpg);
+    text-align: center;
+}
+#page.menu .section h2 {
+    font-size: 40px;
+    line-height: 42px;
+    color: #e7e0d2;
+    text-transform: uppercase;
+    text-align: center;
+}
+#page.menu .section p {
+    color: #d4cab4;
+    font-family: "Times New Roman";
+}
+
+#page.menu .section .separator1, .separator2 {
+    width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #e7e0d2;
+    height: 1px;
+    max-width: 100%;
+}
+
+#page.menu .section .separator1 {
+    margin-top: 23px;
+    height: 4px;
+}
+#page.menu .section .separator1 + .separator2 {
+    margin-top: 4px;
+}
+#page.menu .section .separator2 {
+    margin-bottom: 29px;
+}
+#page.menu .section .menu-item{
+    width: calc(33% - 30px );
+    margin-left: 30px;
+    float: left;
+    overflow: hidden;
+    max-height: 296px;
+    margin-top: 30px;
+}
+#page.menu .section  .menu-name{
+    width: 50%;
+    color: #FFFFFF;
+
+}
+#page.menu .section .menu-price{
+    width: 50%;
+    color: #FFFFFF;
+}
+
+#page.menu .section .menu-item-container{
+    margin-left: -30px;
+}
+
+/*Section 3 "body:not(.no-index) .section_row_3"*/
+
+#page.menu .section ul {
+    padding-left: 0;
+}
+.info {
+    display: table;
+    width: 100%;
+    color: #fff;
+    font-family: "Maiden Orange";
+    font-size: 16px;
+    text-transform: uppercase;
+}
+img + .info {
+    margin-top: 20px;
+}
+.info-list li {
+    max-height: 20px;
+    overflow: hidden;
+}
+.info-list li + li {
+    margin-top: 16px;
+}
+.info__term {
+    display: table-cell;
+    width: 1px;
+    white-space: nowrap;
+}
+.info__dots {
+    display: table-cell;
+}
+.info__dots::before {
+    margin-left: 4px;
+    content: '. . . . . . . . . . . . . . . .' ' . . . . . . . . . . . . . . . .' ' . . . . . . . . . . . . . . . .' ' . . . . . . . . . . . . . . . .' ' . . . . . . . . . . . . . . . .' ' . . . . . . . . . . . . . . . .';
+}
+.info__key {
+    overflow: hidden;
+    display: table-cell;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/*++webshop++*/
+
+/*++contact++*/
+
+/* forms */
+.col-md-3 .form-horizontal .control-label {
+    text-align: left;
+}
+
+.required.form-control.error {
+    background-color: #fec0c0;
+}
+
+/*visuals required from fields*/
+.required.form-control.valid {
+    background-color: #c9fbcd;
+}
+
+#custom_form textarea[rows="3"] {
+    height: 74px;
+}
+
+/*fix for cross browser text area height*/
+
+/* tables */
+.custom_table {
+}
+
+/* galleries */
+.fancybox-image {
+    background-size: contain;
+}
+
+/* faq */
+#accordion_faq .panel-heading {
+    padding: 0;
+}
+
+#accordion_faq .panel-heading > a {
+    display: block;
+    padding: 10px 15px;
+}
+
+#accordion_faq a {
+    display: initial;
+}
+
+/*+++++FOOTER+++++*/
+/*++++++++++++++++*/
+footer {
+    background-color: #1E272E;
+    position: relative;
+}
+
+footer > .container:first-child, footer > .container:nth-child(2) {
+    color: #fff;
+}
+
+footer > .container:first-child {
+    padding: 50px 15px;
+}
+
+footer > .container:last-child {
+    background-color: #00b489;
+    text-align: center;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+footer > .container:last-child > hr, footer > .container:nth-child(2) hr {
+    display: none;
+}
+
+footer .col-md-4 {
+    text-align: center;
+    width: 100%;
+}
+
+.footer_col {
+    padding: 15px;
+}
+
+.copyright {
+    padding: 4px 0;
+}
+
+.footer_navbar {
+    padding: 15px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer p a {
+    color: #00b489;
+}
+
+footer p a:hover {
+    color: #ccc;
+}
+
+.foot_header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.copyright > a {
+    color: #000;
+}
+
+/** social media **/
+footer a[title="Twitter"],
+footer a[title="Facebook"],
+footer a[title="Pinterest"],
+footer a[title="Google+"],
+footer a[title="Linkedin"],
+footer a[title="Youtube"],
+footer a[title="Instagram"] {
+    font-family: FontAwesome;
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8em;
+    text-align: center;
+    border-radius: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #ADA4A9;
+    font-size: 2em;
+    background-color: #1C1A1B;
+}
+
+footer a[title="Twitter"] b,
+footer a[title="Facebook"] b,
+footer a[title="Pinterest"] b,
+footer a[title="Google+"] b,
+footer a[title="Linkedin"] b,
+footer a[title="Youtube"] b,
+footer a[title="Instagram"] b {
+    display: none;
+}
+
+footer a[title="Twitter"]::before {
+    content: '\f099';
+}
+
+footer a[title="Facebook"]::before {
+    content: '\f09a';
+}
+
+footer a[title="Pinterest"]::before {
+    content: '\f0d2';
+}
+
+footer a[title="Google+"]::before {
+    content: '\f0d5';
+}
+
+footer a[title="Linkedin"]::before {
+    content: '\f0e1';
+}
+
+footer a[title="Youtube"]::before {
+    content: '\f167';
+}
+
+footer a[title="Instagram"]::before {
+    content: '\f16d';
+}
+
+footer a[title="Twitter"]:hover {
+    color: #fff;
+    background-color: #00aced;
+}
+
+footer a[title="Facebook"]:hover {
+    color: #fff;
+    background-color: #3b5998;
+}
+
+footer a[title="Pinterest"]:hover {
+    color: #fff;
+    background-color: #cb2027;
+}
+
+footer a[title="Google+"]:hover {
+    color: #fff;
+    background-color: #dd4b39;
+}
+
+footer a[title="Linkedin"]:hover {
+    color: #fff;
+    background-color: #007bb6;
+}
+
+footer a[title="Youtube"]:hover {
+    color: #fff;
+    background-color: #bb0000;
+}
+
+footer a[title="Instagram"]:hover {
+    color: #fff;
+    background-color: #125688;
+}
+
+footer .container:first-child .col-md-4:nth-child(2) p {
+    font-size: 1.4em;
+    letter-spacing: 1px;
+}
+
+footer .links {
+    border-right: 1px solid #fff;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+footer .links:last-child {
+    border-right: none;
+}
+
+footer .container:last-child p a {
+    color: #fff;
+    font-style: italic;
+}
+
+footer ul {
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+footer ul li {
+    border-right: 1px solid #fff;
+    display: inline-block;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+footer ul li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/*+++++MEDIA QUERIES+++++*/
+/*+++++++++++++++++++++++*/
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 479px) {
+}
+
+@media (min-width: 768px) {
+}
+
+/* Extra responsive step for footer / webshop on tablet */
+@media (min-width: 550px) and (max-width: 991px) {
+}
+
+/*----------------------------------------END-OF-FILE----------------------------------------------------*/
