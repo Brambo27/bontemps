@@ -9,4 +9,4 @@ $classReservatie->opslaan_database();
 $classKlant = new \bontemps\Klant($_POST["naam"], $_POST["email"], $_POST["telefoon"], $_POST["wachtwoord"]);
 $classKlant->opslaan_database();
 
-header("location: ../../reserveren.php");
+//header("location: ../../reserveren.php");

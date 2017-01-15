@@ -1,4 +1,4 @@
-<form>
+<form method="post" action="components/reserveren/reserveerActie.php">
     <div class="form-group" >
         <label for="name">Voledige naam</label>
         <input type="text" class="form-control" id="name" placeholder="Voledige naam" required>

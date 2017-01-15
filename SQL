@@ -22,15 +22,6 @@ PRIMARY KEY(reservatieNr),
 FOREIGN KEY (gebruikerNr)REFERENCES gebruiker(gebruikerNr)
 );
 
-CREATE TABLE reservatie_menu
-(
-reservatieNr int,
-menuNr int,
-PRIMARY KEY(reservatieNr, menuNr),
-FOREIGN KEY(reservatieNr)REFERENCES reservatie(reservatieNr),
-FOREIGN KEY(menuNr)REFERENCES menu(menuNr)
-);
-
 CREATE TABLE menu
 (
 menuNr int NOT NULL AUTO_INCREMENT,
@@ -40,3 +31,13 @@ toetje varchar(255),
 menuSoort varchar(255),
 PRIMARY KEY(menuNr)
 );
+
+CREATE TABLE reservatie_menu
+(
+reservatieNr int,
+menuNr int,
+PRIMARY KEY(reservatieNr, menuNr),
+FOREIGN KEY(reservatieNr)REFERENCES reservatie(reservatieNr),
+FOREIGN KEY(menuNr)REFERENCES menu(menuNr)
+);
+
