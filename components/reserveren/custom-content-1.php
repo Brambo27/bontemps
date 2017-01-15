@@ -10,7 +10,7 @@
     </div>
     <div class="form-group">
         <label for="tel">Telefoon nummer</label>
-        <input type="tel" class="form-control" id="tel" placeholder="Telefoon nummer">
+        <input type="tel" class="form-control" id="tel" placeholder="Telefoon nummer" required>
     </div>
     <div class="form-group">
         <label for="exampleSelect1">Example select</label>
@@ -30,15 +30,31 @@
         <label for="radio1">Wilt u een account aanmaken?</label>
         <small id="kortingHelp" class="form-text text-muted">Klanten met een account krijgen 15% korting op hun eerste reservering</small>
         <label class="custom-control custom-radio">
-            <input id="radio1" name="radio" type="radio" class="custom-control-input">
+            <input id="radio1" name="accountRadio" type="radio" value="ja" class="custom-control-input">
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">Ja</span>
         </label>
         <label class="custom-control custom-radio">
-            <input id="radio2" name="radio" type="radio" class="custom-control-input">
+            <input id="radio2" name="accountRadio" type="radio" value="nee" class="custom-control-input">
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">Nee</span>
         </label>
     </div>
+    <div id="passwordContainer" class="form-group" style="display: none;" >
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="wachtwoord" required>
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<script>
+    $('input[name="accountRadio"]').on('change', function(){
+        if ($(this).val()=='ja') {
+            //change to "show update"
+            $("#passwordContainer").css('display', 'block');
+            $("input").prop('required',true);
+        } else  {
+            $("#passwordContainer").css('display', 'none');
+            $("input").prop('required',false);
+        }
+    });
+</script>

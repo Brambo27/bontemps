@@ -1,4 +1,3 @@
-<!--KIUHK MAMA HIJ DOET HGET-->
 <!DOCTYPE html>
 <html lang="nl">
 <?php include 'components/head.php' ?>

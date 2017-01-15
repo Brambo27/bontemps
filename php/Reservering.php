@@ -7,11 +7,35 @@
  */
 
 namespace bontemps;
+require_once 'Database_connect.php';
 
-
-class Reservering
+class Reservering extends Database_connect
 {
     private $reserveringNr;
     private $datum;
     private $aantal_personen;
+
+    function __construct($datum, $aantal_personen)
+    {
+        $this->initialiseer();
+        $this->datum = $datum;
+        $this->aantal_personen = $aantal_personen;
+    }
+    private function initialiseer(){
+        $this->reserveringNr = 0;
+    }
+
+    public function opslaan_database(){
+        $this->connect();
+
+        $sql = "INSERT INTO reservatie (datum, aantal_personen) VALUES ('".$this->datum."', '".$this->aantal_personen."')";
+
+        if ($this->conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $this->conn->error;
+        }
+
+        $this->conn->close();
+    }
 }

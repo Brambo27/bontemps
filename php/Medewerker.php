@@ -16,4 +16,13 @@ class Medewerker
     private $positie;
     private $adres;
     private $telefoon;
+
+    function __construct()
+    {
+        $this->initialiseer();
+
+    }
+    private function initialiseer(){
+
+    }
 }
