@@ -1,43 +1,57 @@
-CREATE TABLE gebruiker
+CREATE TABLE klant
 (
-gebruikerNr int NOT NULL AUTO_INCREMENT,
+klantNr int NOT NULL AUTO_INCREMENT,
 voledigeNaam varchar(255),
 wachtwoord varchar(255),
 email varchar(255),
-adres varchar(255),
 telNr varchar(255),
-gebruikerSoort varchar(255),
-PRIMARY KEY(gebruikerNr)
+PRIMARY KEY(klantNr)
 );
 
-CREATE TABLE reservatie
+CREATE TABLE reservering
 (
-reservatieNr int NOT NULL AUTO_INCREMENT,
+reserveringNr int NOT NULL AUTO_INCREMENT,
 datum date,
 beginTijd time,
 eindTijd time,
 aantalPersonen int(2),
-gebruikerNr int NOT NULL,
-PRIMARY KEY(reservatieNr),
-FOREIGN KEY (gebruikerNr)REFERENCES gebruiker(gebruikerNr)
+klantNr int NOT NULL,
+PRIMARY KEY(reserveringNr),
+FOREIGN KEY (klantNr)REFERENCES klant(klantNr)
+);
+
+CREATE TABLE gerecht
+(
+gerechtNr int NOT NULL AUTO_INCREMENT,
+naam varchar(255),
+omschrijving varchar(255),
+prijs int,
+beschikbaarheid varchar(4),
+PRIMARY KEY(gerechtNr)
 );
 
 CREATE TABLE menu
 (
 menuNr int NOT NULL AUTO_INCREMENT,
-voorGerecht varchar(255),
-hoofdGerecht varchar(255),
-toetje varchar(255),
+voorGerecht int,
+hoofdGerecht int,
+naGerecht int,
 menuSoort varchar(255),
-PRIMARY KEY(menuNr)
+reserveringNr int NOT NULL,
+PRIMARY KEY(menuNr),
+FOREIGN KEY (reserveringNr)REFERENCES reservering(reserveringNr),
+FOREIGN KEY (voorGerecht)REFERENCES gerecht(gerechtNr),
+FOREIGN KEY (hoofdGerecht)REFERENCES gerecht(gerechtNr),
+FOREIGN KEY (naGerecht)REFERENCES gerecht(gerechtNr)
 );
 
-CREATE TABLE reservatie_menu
+CREATE TABLE medewerker
 (
-reservatieNr int,
-menuNr int,
-PRIMARY KEY(reservatieNr, menuNr),
-FOREIGN KEY(reservatieNr)REFERENCES reservatie(reservatieNr),
-FOREIGN KEY(menuNr)REFERENCES menu(menuNr)
+medewerkerNr int NOT NULL AUTO_INCREMENT,
+voledigeNaam varchar(255),
+wachtwoord varchar(255),
+email varchar(255),
+aderes varchar(255),
+positie varchar(255),
+PRIMARY KEY(medewerkerNr)
 );
-
