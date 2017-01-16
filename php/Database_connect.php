@@ -15,7 +15,7 @@ class Database_connect
     protected function connect(){
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "WachtwoordphpMyAdmin";
         $dbname = "bontemps_database";
 
         // Create connection

@@ -1,20 +1,20 @@
 <form method="post" action="components/reserveren/reserveerActie.php">
     <div class="form-group" >
         <label for="name">Voledige naam</label>
-        <input type="text" class="form-control" id="name" placeholder="Voledige naam" required>
+        <input type="text" class="form-control" id="name" name="naam" placeholder="Voledige naam" required>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
         <label for="tel">Telefoon nummer</label>
-        <input type="tel" class="form-control" id="tel" placeholder="Telefoon nummer" required>
+        <input type="tel" class="form-control" id="tel" name="telefoon" placeholder="Telefoon nummer" required>
     </div>
     <div class="form-group">
         <label for="exampleSelect1">Example select</label>
-        <select class="form-control" id="exampleSelect1" required>
+        <select class="form-control" name="aantalPersonen" id="exampleSelect1" required>
             <option>1</option>
             <option>2</option>
             <option>3</option>
