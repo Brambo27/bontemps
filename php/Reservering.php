@@ -14,12 +14,14 @@ class Reservering extends Database_connect
     private $reserveringNr;
     private $datum;
     private $aantalPersonen;
+    private $lastKlantId;
 
-    function __construct($datum, $aantalPersonen)
+    function __construct($datum, $aantalPersonen, $lastKlantId)
     {
         $this->initialiseer();
         $this->datum = $datum;
         $this->aantalPersonen = $aantalPersonen;
+        $this->lastKlantId = $lastKlantId;
     }
     private function initialiseer(){
         $this->reserveringNr = 0;
@@ -28,10 +30,7 @@ class Reservering extends Database_connect
     public function opslaan_database(){
         $this->connect();
 
-        $sql = "INSERT INTO reservering (aantalPersonen, datum, klantNr) VALUES ('".$this->datum."', '".$this->aantalPersonen."', '".mysqli_insert_id($this->conn)."')";
-        echo ("<br>");
-        var_dump(mysqli_insert_id($this->conn));
-        echo ("<br>");
+        $sql = "INSERT INTO reservering (aantalPersonen, datum, klantNr) VALUES ('".$this->datum."', '".$this->aantalPersonen."', '".$this->lastKlantId."')";
         if ($this->conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {

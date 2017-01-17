@@ -16,6 +16,7 @@ class Klant extends Database_connect
     private $telefoon;
     private $email;
     private $wachtwoord;
+    public $lastKlantId;
 
     function __construct($naam, $email, $telefoon, $wachtwoord)
     {
@@ -35,8 +36,13 @@ class Klant extends Database_connect
 
         if ($this->conn->query($sql) === TRUE) {
             echo "New record created successfully";
+            echo ("<br> Klant with id number");
+            var_dump(mysqli_insert_id($this->conn));
+            echo ("<br>");
+            $this->lastKlantId = mysqli_insert_id($this->conn);
         } else {
             echo "Error: " . $sql . "<br>" . $this->conn->error;
+            echo ("<br>");
         }
 
         $this->conn->close();
