@@ -1,4 +1,4 @@
-<form method="post" action="components/reserveren/reserveerActie.php">
+<form method="post" action="menu.php">
     <div class="form-group" >
         <label for="name">Voledige naam</label>
         <input type="text" class="form-control" id="name" name="naam" placeholder="Voledige naam" required>
@@ -23,6 +23,25 @@
         </select>
     </div>
     <div class="form-group">
+    <input type="text" id="datepicker" name="datum" placeholder="Datum">
+    </div>
+    <div class="form-group">
+        <select class="form-control" name="uur" placeholder="Tijd" required>
+            <option>16:00</option>
+            <option>16:30</option>
+            <option>17:00</option>
+            <option>17:30</option>
+            <option>18:00</option>
+            <option>18:30</option>
+            <option>19:00</option>
+            <option>19:30</option>
+            <option>20:00</option>
+            <option>20:30</option>
+            <option>21:00</option>
+            <option>21:30</option>
+        </select>
+    </div>
+    <div class="form-group">
         <label for="exampleTextarea">Example textarea</label>
         <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
     </div>
@@ -44,12 +63,11 @@
         <label for="inputPassword">Password</label>
         <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="wachtwoord" required>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <script>
     $('input[name="accountRadio"]').on('change', function(){
         if ($(this).val()=='ja') {
-            //change to "show update"
             $("#passwordContainer").css('display', 'block');
             $("input").prop('required',true);
         } else  {
@@ -57,4 +75,7 @@
             $("input").prop('required',false);
         }
     });
+    $( function() {
+        $( "#datepicker" ).datepicker({dateFormat: 'dd-mm-yy '});
+    } );
 </script>

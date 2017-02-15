@@ -38,6 +38,7 @@
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
             center: {lat: 52.387350, lng: 4.616547},
+            scrollwheel: false ,
             zoom: 15
         });
     }

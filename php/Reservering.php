@@ -16,10 +16,11 @@ class Reservering extends Database_connect
     private $aantalPersonen;
     private $lastKlantId;
 
-    function __construct($datum, $aantalPersonen, $lastKlantId)
+    function __construct($aantalPersonen, $datum, $lastKlantId)
     {
         $this->initialiseer();
         $this->datum = $datum;
+        $this->datum = date("Y-d-m", strtotime($this->datum));
         $this->aantalPersonen = $aantalPersonen;
         $this->lastKlantId = $lastKlantId;
     }
@@ -30,7 +31,8 @@ class Reservering extends Database_connect
     public function opslaan_database(){
         $this->connect();
 
-        $sql = "INSERT INTO reservering (aantalPersonen, datum, klantNr) VALUES ('".$this->datum."', '".$this->aantalPersonen."', '".$this->lastKlantId."')";
+        $sql = "INSERT INTO reservering (datum, aantalPersonen, klantNr) VALUES ('".$this->datum."', '".$this->aantalPersonen."', '".$this->lastKlantId."')";
+        var_dump($sql);
         if ($this->conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {

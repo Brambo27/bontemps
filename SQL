@@ -1,10 +1,10 @@
 CREATE TABLE klant
 (
 klantNr int NOT NULL AUTO_INCREMENT,
-voledigeNaam varchar(255),
+naam varchar(255),
 wachtwoord varchar(255),
 email varchar(255),
-telNr varchar(255),
+telefoon varchar(255),
 PRIMARY KEY(klantNr)
 );
 

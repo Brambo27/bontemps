@@ -6,12 +6,22 @@
     <?php include 'components/header.php' ?>
     <div class="content">
         <?php
-        include 'components/menu/section_row_main.php';
-        include 'components/menu/section_row_1.php';
-        include 'components/menu/section_row_2.php';
-        include 'components/menu/section_row_3.php';
-        include 'components/menu/section_row_4.php';
-        include 'components/menu/section_row_5.php'
+        if(isset($_POST["naam"])) {
+            include 'components/samenstellen/section_row_main.php';
+            include 'components/samenstellen/section_row_1.php';
+            include 'components/samenstellen/section_row_2.php';
+            include 'components/samenstellen/section_row_3.php';
+            include 'components/samenstellen/section_row_4.php';
+            include 'components/samenstellen/section_row_5.php';
+        }
+        else{
+            include 'components/menu/section_row_main.php';
+            include 'components/menu/section_row_1.php';
+            include 'components/menu/section_row_2.php';
+            include 'components/menu/section_row_3.php';
+            include 'components/menu/section_row_4.php';
+            include 'components/menu/section_row_5.php';
+        }
         ?>
     </div>
 </div>

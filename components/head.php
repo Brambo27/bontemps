@@ -10,6 +10,8 @@
 
     <!--    Jquery CDN  -->
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="../bontemps/js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../bontemps/js/jquery-ui-1.12.1.custom/jquery-ui.css">
 
     <!--    Bootstrap CDN-->
     <link rel="stylesheet" href="../bontemps/css/bootstrap.min.css">

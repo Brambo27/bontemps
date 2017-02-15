@@ -1,4 +1,4 @@
-<div class="dubble_wrapper section section_row_main">
+<div class="wrapper section section_row_main">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
