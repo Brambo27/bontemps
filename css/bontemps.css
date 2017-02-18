@@ -322,7 +322,23 @@ body:not(.no-index) #owl-carousel .owl-item img{
     overflow: hidden;
     max-height: 296px;
     margin-top: 30px;
-    height: 242px;
+}
+#page.menu .menu-item img {
+    max-width: 100%;
+    margin-bottom: -55px;
+}
+.btn-container {
+    position: relative;
+    height: 33px;
+    margin-bottom: 30px;
+}
+.btn.btn-defaut.add {
+    float: right;
+    margin-right: 20px;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    background-color: #7F2A23;
 }
 #page.menu .section .menu-item-select{
     width: calc(25% - 30px );

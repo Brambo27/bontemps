@@ -11,27 +11,27 @@ require_once 'Database_connect.php';
 
 class Reservering extends Database_connect
 {
-    private $reserveringNr;
     private $datum;
     private $aantalPersonen;
     private $lastKlantId;
+    private $beginTijd;
 
-    function __construct($aantalPersonen, $datum, $lastKlantId)
+    function __construct($aantalPersonen, $datum, $lastKlantId, $beginTijd)
     {
         $this->initialiseer();
         $this->datum = $datum;
-        $this->datum = date("Y-d-m", strtotime($this->datum));
+        $this->datum = date("Y-m-d", strtotime($this->datum));
         $this->aantalPersonen = $aantalPersonen;
         $this->lastKlantId = $lastKlantId;
+        $this->beginTijd = $beginTijd;
     }
     private function initialiseer(){
-        $this->reserveringNr = 0;
     }
 
     public function opslaan_database(){
         $this->connect();
 
-        $sql = "INSERT INTO reservering (datum, aantalPersonen, klantNr) VALUES ('".$this->datum."', '".$this->aantalPersonen."', '".$this->lastKlantId."')";
+        $sql = "INSERT INTO reservering (datum, aantalPersonen, klantNr, beginTijd) VALUES ('".$this->datum."', '".$this->aantalPersonen."', '".$this->lastKlantId."', '". $this->beginTijd ."')";
         var_dump($sql);
         if ($this->conn->query($sql) === TRUE) {
             echo "New record created successfully";

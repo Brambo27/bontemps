@@ -26,7 +26,7 @@
     <input type="text" id="datepicker" name="datum" placeholder="Datum">
     </div>
     <div class="form-group">
-        <select class="form-control" name="uur" placeholder="Tijd" required>
+        <select class="form-control" name="beginTijd" placeholder="Tijd" required>
             <option>16:00</option>
             <option>16:30</option>
             <option>17:00</option>

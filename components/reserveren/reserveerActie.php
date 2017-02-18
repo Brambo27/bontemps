@@ -7,7 +7,7 @@ $classKlant = new \bontemps\Klant($_POST["naam"], $_POST["email"], $_POST["telef
 $classKlant->opslaan_database();
 
 
-$classReservering = new \bontemps\Reservering($_POST['aantalPersonen'], $_POST["datum"], $classKlant->lastKlantId);
+$classReservering = new \bontemps\Reservering($_POST['aantalPersonen'], $_POST["datum"], $classKlant->lastKlantId, $_POST["beginTijd"]);
 $classReservering->opslaan_database();
 
 //header("location: ../../reserveren.php");
