@@ -7,7 +7,7 @@
     <div class="content">
         <?php
         include 'components/reserveren/section_row_main.php';
-//        include 'components/reserveren/section_row_1.php';
+//        include 'components/reserveren/section_row_main.php';
 //        include 'components/reserveren/section_row_2.php';
 //        include 'components/reserveren/section_row_3.php';
 //        include 'components/reserveren/section_row_4.php';
